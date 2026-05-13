@@ -136,5 +136,70 @@
 
 @media(max-width:900px){
   .exec-grid { grid-template-columns: 1fr; }
-  #gloss-btn { bottom: 80px; }
+  #gloss-btn { bottom: 70px; }
+}
+
+@media(max-width:600px){
+
+  /* Glossary button — sits above scroll btn */
+  #gloss-btn {
+    bottom: 68px; right: 14px;
+    padding: 7px 11px; font-size: 10px; gap: 5px;
+    border-radius: 8px;
+  }
+
+  /* Modal — full screen on phone */
+  .modal-backdrop { align-items: flex-end; }
+  .modal-box {
+    width: 100%; border-radius: 18px 18px 0 0;
+    max-height: 85vh; padding: 22px 16px 32px;
+  }
+  .modal-close { top: 14px; right: 14px; font-size: 18px; }
+  .modal-box > div:first-child { font-size:18px !important; }
+
+  /* Glossary grid — single column */
+  .gloss-grid { grid-template-columns: 1fr; gap: 10px; margin-top: 16px; }
+  .gloss-entry { padding: 12px 14px; }
+  .gloss-term { font-size: 12px; }
+  .gloss-def { font-size: 11px; }
+
+  /* Jargon tooltip — center on small screens */
+  .jargon-tip {
+    left: 50%; transform: translateX(-50%);
+    width: min(260px, 86vw);
+    font-size: 11px;
+  }
+
+  /* Key takeaway box */
+  .takeaway {
+    flex-direction: column; gap: 10px; padding: 14px 14px; margin-top: 20px;
+  }
+  .takeaway-icon { width: 32px; height: 32px; font-size: 14px; }
+  .takeaway-body strong { font-size: 10px; }
+  .takeaway-body p { font-size: 12px; }
+
+  /* Plain-language box */
+  .plain-box { padding: 12px 14px; margin: 12px 0; }
+  .plain-box .plain-label { font-size: 9px; }
+  .plain-box p { font-size: 12px; }
+
+  /* Accordion */
+  .acc-wrap { margin-top: 10px; }
+  .acc-head { padding: 12px 14px; gap: 10px; }
+  .acc-head span { font-size: 12px; }
+  .acc-content-inner { padding: 14px; }
+  .acc-content-inner p { font-size: 12px; }
+  .acc-content-inner ul li { font-size: 12px; }
+
+  /* Exec grid */
+  .exec-grid { grid-template-columns: 1fr; gap: 10px; }
+  .exec-card { padding: 14px 14px; }
+  .exec-card-title { font-size: 13px; }
+  .exec-card-body { font-size: 11px; }
+}
+
+@media(max-width:380px){
+  .modal-box { padding: 18px 12px 28px; }
+  .takeaway { padding: 12px 12px; }
+  .gloss-grid { gap: 8px; }
 }
